@@ -8,12 +8,21 @@ class ComponentTwo extends React.Component {
     this.state = {
       count: props.count
     }
+    //bind the handler to the component
+    this.onClick = this.onClick.bind(this)
+  }
+  onClick () { //bind on clice
+    this.setState({
+      count: this.state.count + 1
+    });
   }
   render() {
     return (
       <div>
         <h3>Component Two Extending  React.Component</h3>
         <p>Current count: {this.state.count}</p>
+        <button className="button hollow" onClick= {this.onClick}>Button Two</button>
+
       </div>
     )
   }

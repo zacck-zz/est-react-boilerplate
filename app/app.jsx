@@ -13,7 +13,7 @@ require('style!css!sass!applicationStyles')
 ReactDOM.render(
   <div>
     <ComponentOne count={455}/>
-    <ComponentTwo count={'ikwndkw'}/>
+    <ComponentTwo count={50}/>
   </div>,
   document.getElementById('app')
 );
