@@ -26,16 +26,45 @@ class Person {
 }
 
 
+//NEw class that extends another
+class Child extends Person {
+  //override existing class
+  constructor(name, age, like) {
+    super(name, age);
+    this.like = like;
+  }
+  getGreeting() {
+    return `Hiiiiiiiii! my name is ${this.name} and I like ${this.like}.`;
+  }
+
+  //new methods
+
+}
+
+
+//challenge class
+class Baby extends Person {
+  getGreeting() {
+    return 'Waaaaaaaaahhhhhhhhh';
+  }
+}
+
 //instance
 var me = new Person('Zacck', 26);
-var anon = new Person();
+var anon = new Child('Mike', 4, 'cars');
+var baby = new Baby('Wendy', 1);
 
 console.log(me.getGreeting());
-console.log('toString call', me.toString());
+console.log(me.printDescription());
 
 
-console.log('anon calls', anon.getGreeting());
-console.log('anon calls', anon.printDescription());
+console.log('child calls', anon.getGreeting());
+console.log('baby calls', baby.getGreeting());
+
+
+
+
+
 
 
 //challenge add a variable to constructor and log a result from it
