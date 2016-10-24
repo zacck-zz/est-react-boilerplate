@@ -1,9 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-import ComponentOne from './components/ComponentOne'
-import ComponentTwo from './components/ComponentTwo'
 import Clock from './components/Clock'
+import Events from './components/Events'
 
 // Load foundation
 $(document).foundation();
@@ -13,9 +12,8 @@ require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
   <div>
-    <ComponentOne count={455}/>
-    <ComponentTwo count={50}/>
-    <Clock date={new Date()}/>
+    <Clock/>
+    <Events/>
   </div>,
   document.getElementById('app')
 );
