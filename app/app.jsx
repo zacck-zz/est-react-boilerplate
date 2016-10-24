@@ -3,6 +3,7 @@ var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 import ComponentOne from './components/ComponentOne'
 import ComponentTwo from './components/ComponentTwo'
+import Clock from './components/Clock'
 
 // Load foundation
 $(document).foundation();
@@ -14,6 +15,7 @@ ReactDOM.render(
   <div>
     <ComponentOne count={455}/>
     <ComponentTwo count={50}/>
+    <Clock date={new Date()}/>
   </div>,
   document.getElementById('app')
 );
